@@ -49,6 +49,7 @@ server.post('/cadastrar', async (req, res) => {
 
 server.post('/login', (req, res) => {
     const { email, senha } = req.body;
+    console.log(email);
     if (!usuarioExiste(email, senha)) {
         const status = 401
         const message = 'E-mail ou senha incorretos!'
